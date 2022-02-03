@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+.shadow {
+    position: relative;
+    margin: 100px auto 0;
+    width: 700px;
+    height: 500px;
+    background: linear-gradient(0deg, #000, #262626);
+}
+
+.shadow:before,
+.shadow:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+.shadow:after {
+    filter: blur(20px);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* button */
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.outer {
+    position: relative;
+    margin-top: 50px;
+    background: #262626;
+}
+
+.button {
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+
+}
+
+.outer button,
+.outer span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outer button {
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    z-index: 9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button button {
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+
+}
+
+.outer span {
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.button span {
+    border-radius: 50px;
+}
+
+.outer:hover span:nth-child(1) {
+    filter: blur(7px);
+}
+
+.outer:hover span:nth-child(2) {
+    filter: blur(14px);
+}
+
+.outer:hover {
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.about_btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

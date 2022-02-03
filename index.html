@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <!-- title icon -->
+    <link rel="shortcut icon" href="./asset/HK Logo favicon.png" type="image/x-icon">
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="./css/switch.css">
+    <link rel="stylesheet" href="./css/snow.css">
+    <!-- JS FILE -->
+    <script src="./js/snow.js"></script>
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="snow"></div>
+    <h2>click here</h2>
+    <label>
+        <a href="./home.html" target="_blank" rel="noopener noreferrer">
+            <input type="checkbox" name="">
+            <span class="btn"></span>
+            <i class="fa fa-power-off"></i>
+        </a>
+    </label>
+<!-- chatbot -->
+    <script type='text/javascript'>
+        (function (I, L, T, i, c, k, s) {
+            if (I.iticks) return;
+            I.iticks = {
+                host: c,
+                settings: s,
+                clientId: k,
+                cdn: L,
+                queue: []
+            };
+            var h = T.head || T.documentElement;
+            var e = T.createElement(i);
+            var l = I.location;
+            e.async = true;
+            e.src = (L || c) + '/client/inject-v2.min.js';
+            h.insertBefore(e, h.firstChild);
+            I.iticks.call = function (a, b) {
+                I.iticks.queue.push([a, b]);
+            };
+        })(window, 'https://cdn-v1.intelliticks.com/prod/common', document, 'script', 'https://app.intelliticks.com',
+            '3TckS3KZ9BztSNtZL_c', {});
+    </script>
+</body>
+
+</html>
